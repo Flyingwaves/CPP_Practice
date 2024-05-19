@@ -152,3 +152,12 @@ if(*p)	//p指向对象为0是假，非0是真
 (c) 合法
 
 (d) `++cnt`合法。`++sz`不合法，sz是const对象，不可改变。
+### 练习 2.27
+```
+(a) int i = -1, &r = 0;          //r的初始化不合法，r的初值必须是一个对象
+(b) int *const p2 = &i2;         //合法，p2是常量指针
+(c) const int i = -1, &r = 0;    //合法，r是常量引用，可以初始化为字面值或表达式
+(d) const int *const p3 = &i2;   //合法，p3是指向常量的常量指针
+(e) const int *p1 = &i2;         //合法，p1是指向常量的指针
+(f) const int &const r2;         //不合法，r2是引用不是对象，并不具有类型const
+(g) const int i2 = i, &r = i;    //合法
