@@ -180,3 +180,18 @@ if(*p)	//p指向对象为0是假，非0是真
 (e) p2 = p1;     //不合法，p2是常量指针，也是不可赋值更改
 (f) ic = *p3;    //不合法，ic是个常量，其值不可赋值更改
 ```
+### 练习 2.30
+```
+const int v2 = 0;        //v2是顶层const
+int v1 = v2;             
+int *p1 = &v1, &r1 = v1;
+const int *p2 = &v2, *const p3 = &i, &r2 = v2;    //p2是底层const，p3既是顶层const又是底层const，r2是底层const
+```
+### 练习 2.31
+```
+r1 = v2;    //合法，v2顶层const拷贝不受影响。
+p1 = p2;    //不合法，p2是底层const但p1不是
+p2 = p1;'   //合法，int*能转换为const int*，普通指针拷贝不受影响，可以赋值给底层const
+p1 = p3;    //不合法，p3是底层const但p1不是
+p2 = p3;    //合法，二者都有相同底层const资格 
+```
