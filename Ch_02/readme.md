@@ -205,3 +205,33 @@ int *p = null;
 int null = 0, *p = &null;
 int null = 0, *p = nullptr;
 ```
+### 练习 2.33
+本节定义变量如下：
+```
+int i = 0, &r = i;
+const int ci = i, &cr = ci;
+auto a = r;
+auto b = ci;
+auto c = cr;
+auto d = &i;
+auto e = &ci;
+auto &g = ci;
+```
+运行结果：
+```
+a = 42;    //a是一个普通int，正常赋值
+b = 42;    //b是一个普通int，正常赋值
+c = 42;    //c是一个普通int，正常赋值
+d = 42;    //d是整型指针，发生错误，并未赋值一个地址
+e = 42;    //e是指向整型常量的指针，出错，未赋值一个地址
+g = 42;    //g是常量引用，出错，常量引用不可更改
+```
+### 练习 2.35
+这里这个const auto总感觉很奇怪，不太熟悉
+```
+const int i = 42;
+auto j = i;      //j是普通int
+const auto &k = i;      //k是int常量引用，易错
+auto *p = &i;           //p是指向常量int的指针
+const auto j2 = i, &k2 = i;      //j2是int常量，k2是int常量引用，易错
+```
