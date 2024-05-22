@@ -235,3 +235,40 @@ const auto &k = i;      //k是int常量引用，易错
 auto *p = &i;           //p是指向常量int的指针
 const auto j2 = i, &k2 = i;      //j2是int常量，k2是int常量引用，易错
 ```
+### 练习 2.36
+```
+int a = 3, b = 4;
+decltype(a) c = a;    //c是int
+decltype((b)) d = a;  //d是int引用，int&
+++ c;
+++ d;
+```
+输出结果：
+```
+a = 4
+b = 4
+c = 4
+d = 4
+```
+### 练习 2.37
+```
+int a = 3, b = 4;
+decltype(a) c = a;        //c是int，c = 3
+decltype(a = b) d = a;    //d是int&，这里分析表达式但并不执行表达式
+```
+输出结果：
+```
+a = 3, b = 4, c = 3, d = 3
+```
+### 练习 2.38
+1.decltype处理顶层const和引用时，会将其保留下来作为返回类型。但auto会忽略顶层const和引用
+2.decltype结果类型与表达式形式有关，有时候在变量外面加括号会得到不同的类型。
+```
+int a = 6;
+auto m = a;          //m是int
+decltype(a) n = a;   //n是int
+
+const int c = 24;
+auto j = c;          //j是int
+decltype(c) k = c;   //k是const int
+```
