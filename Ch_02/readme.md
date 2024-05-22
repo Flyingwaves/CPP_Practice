@@ -273,3 +273,16 @@ const int c = 24;
 auto j = c;          //j是int
 decltype(c) k = c;   //k是const int
 ```
+### 练习 2.39
+Error message: [Error] expected ';' after struct definition
+### 练习 2.40
+```
+struct Sales_data {
+    std::string name;
+    std::string bookNum;
+    int saleNum;
+    double price;
+    double revenue;
+};
+```
+
