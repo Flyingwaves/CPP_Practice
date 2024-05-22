@@ -285,4 +285,19 @@ struct Sales_data {
     double revenue;
 };
 ```
-
+### 练习 2.42
+示例运行：ctrl+z可以结束输入，解决了循环等待输入无法验证的烦恼
+```
+nb
+3
+2.4
+nb
+4
+3.8
+fjdskl
+5
+5.5
+nb 7 22.4
+^Z
+fjdskl 5 27.5
+```
