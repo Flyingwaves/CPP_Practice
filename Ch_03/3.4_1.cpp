@@ -8,7 +8,7 @@ int main()
 	string s1, s2;
 	cin >> s1;
 	cin >> s2;
-	if (s1 == s2)	cout << "二者相等" << endl;
+	if (s1 == s2)	cout << "露镁脮脽脧脿碌脠" << endl;
 	else if (s1 > s2)	cout << s1 << endl;
 	else	cout << s2 << endl;
 
