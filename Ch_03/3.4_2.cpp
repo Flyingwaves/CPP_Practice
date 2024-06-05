@@ -7,7 +7,7 @@ int main()
 {
 	string s1, s2;
 	cin >> s1 >> s2;
-	if (s1.size() == s2.size())	cout << "¶þÕß³¤¶ÈÏàµÈ" << endl;
+	if (s1.size() == s2.size())	cout << "äºŒè€…é•¿åº¦ç›¸ç­‰" << endl;
 	else if (s1.size() > s2.size())	cout << s1 << endl;
 	else
 	{
