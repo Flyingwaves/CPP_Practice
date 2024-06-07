@@ -56,3 +56,15 @@ i am a  good boy  hello
 ^Z
 iamagoodboyhello
 ```
+### 练习 3.6
+### 练习 3.7
+不会发生字符替换
+原来输出：
+```
+XXXXXXXXXXXXXXX
+```
+更改char后输出：
+```
+I am a good boy
+```
+### 练习 3.8
