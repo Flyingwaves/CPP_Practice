@@ -57,8 +57,10 @@ i am a  good boy  hello
 iamagoodboyhello
 ```
 ### 练习 3.6
+[X 替换所有字符](3.6.cpp)
 ### 练习 3.7
 不会发生字符替换
+
 原来输出：
 ```
 XXXXXXXXXXXXXXX
@@ -68,3 +70,4 @@ XXXXXXXXXXXXXXX
 I am a good boy
 ```
 ### 练习 3.8
+[while版本第6题](3.8.cpp)
