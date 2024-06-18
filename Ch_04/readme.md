@@ -178,3 +178,74 @@ ul2 = 00000000 00000000 00000000 00000111
 (c) ul1 && ul2 = true;
 (d) ul1 || ul2 = true;
 ```
+### 练习 4.28
+[程序4.28: 输出内置类型大小](4.28.cpp)
+
+输出：(这个对齐真美，得好好学学\t，用不好）
+```
+void: nullptr_t 4 bytes
+
+bool:           1 bytes
+
+char:           1 bytes
+wchar_t:        2 bytes
+char16_t:       2 bytes
+char32_t:       4 bytes
+
+short:          2 bytes
+int:            4 bytes
+long:           4 bytes
+long long:      8 bytes
+
+float:          4 bytes
+double:         8 bytes
+long double:    8 bytes
+
+int8_t:         1 bytes
+uint8_t:        1 bytes
+int16_t:        2 bytes
+uint16_t:       2 bytes
+int32_t:        4 bytes
+uint32_t:       4 bytes
+int64_t:        8 bytes
+uint64_t:       8 bytes
+
+```
+### 练习 4.29
+指针`p`所占4字节，其所指对象也占4字节，所以第二行是1.
+
+输出：
+```
+10
+1
+
+```
+### 练习 4.30
+```
+(a) (sizeof x) + y
+(b) sizeof (p->mem[i])
+(c) (sizeof a) < b
+(d) sizeof f()
+```
+### 练习 4.31
+前置版本用的对象本身，而后置版本用的对象变化前的副本，会造成资源的浪费。
+
+使用后置版本不需要做什么改动：
+```
+vector<int>::size_type cnt = ivec.size();
+for (vector<int>::size_type ix = 0; ix != ivec.size(); ix++, cnt--)
+        ivec[ix] = cnt;
+```
+### 练习 4.32
+遍历整个数组，进行有关操作。
+
+ptr和ix的作用是一样的，ptr用的是指针，ix用的是下标。
+### 练习 4.33
+```
+someValue ? ++x, ++y : --x , --y
+= (someValue ? ++x, ++y : --x) , --y
+//当someValue = true时，计算++x和++y, 再计算--y，表达式最终结果是y
+//当someValue = false时，计算--x，再计算--y，表达式最终结果是y - 1
+
+//个人认为，一个表达式的最终结果可以看作为其返回值
+```
