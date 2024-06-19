@@ -249,3 +249,29 @@ someValue ? ++x, ++y : --x , --y
 
 //个人认为，一个表达式的最终结果可以看作为其返回值
 ```
+### 练习 4.34
+```
+(a) if(fval);    //float转化为bool
+(b) dval = fval + ival;    //ival转化为float, 结果再转换为double
+(c) dval + ival * cval;    //cval提升至int, 之后ival和cval转换成double
+```
+### 练习 4.35
+```
+(a) cval = 'a' + 3;    //发生了, 'a'提升至int, 'a'+3的结果转换成char
+(b) fval = ui - ival * 1.0;    //发生了, ival和ui转换成double，求值结果转换成float
+(c) dval = ui * fval;    //ui转换成float，结果再转换成double
+(d) cval = ival + fval + dval;    //ival和fval转换成double，结果再转换成char
+```
+### 练习 4.36
+```
+i *= static_cast<int> (d);
+```
+### 练习 4.37
+```
+pv = static_cast<void*>(const_cast<string*>(ps));
+i = static_cast<int>(*pc);
+pv = static_cast<void*>(&d);
+pc = static_cast<char*>(pv);
+```
+### 练习 4.38
+先计算int型`j`与int型`i`的除法，得到int型结果，再将这个结果强制转换成double型赋值给`slope`
