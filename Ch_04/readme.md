@@ -1,14 +1,14 @@
 ### 练习 4.1
 求值结果是 105
 ### 练习 4.2
-```
+```cpp
 (a) *(vec.begin())
 (b) (*(vec.begin())) + 1
 ```
 ### 练习 4.3
 不可以。不同编译器优化结果可能导致求值顺序不一样，出现无法解决的错误。
 ### 练习 4.4
-```
+```cpp
 ((12 / 3) * 4) + (5 * 15) + ((24 % 4) / 2)
 = 16 + 75 + 0
 = 91
@@ -22,13 +22,13 @@
 
 (d) -210 % 4 = -2
 ### 练习 4.6
-```
+```cpp
 i % 2    //求余法
 i & 0x1    //位运算法
 ```
 ### 练习 4.7
 溢出：计算结果超越类型的表示范围
-```
+```cpp
 short a = 32767; a ++;       //a = -32768
 short b = -32768; b = -b;    //b = -32768
 unsigned c = 0; c --;        //c = 4294967295
@@ -46,11 +46,11 @@ unsigned c = 0; c --;        //c = 4294967295
 
 所以if条件判断为真
 ### 练习 4.10
-```
+```cpp
 while(cin >> num && num != 42)
 ```
 ### 练习 4.11
-```
+```cpp
 a < b && b < c && c < d
 ```
 ### 练习 4.12
@@ -60,25 +60,25 @@ a < b && b < c && c < d
 
 若为真，转化为`i != true`，同理，可进一步变为`i != 1`
 ### 练习 4.13
-```
+```cpp
 int i; double d;
 (a) d = i = 3.5;    //i = 3, d = 3.0  注意这里是3.0而非整数3
 (b) i = d = 3.5;    //d = 3.5, i = 3
 ```
 ### 练习 4.14
-```
+```cpp
 if(42 = i)        //报错。赋值左侧运算对象不能是右值，而整数字面量是右值。
 if(i = 42)        //将42赋值给i，判断为真，执行if分支
 ```
 ### 练习 4.15
 `pi`是`int*`型，`ival`是`int`型，二者不能转换，所以`ival = pi = 0`是非法的
-```
+```cpp
 double dval; int ival; int *pi;
 pi = 0;
 dval = ival = 0;
 ```
 ### 练习 4.16
-```
+```cpp
 (a) if(p = getPtr() != 0)
 
 //赋值运算符优先级低，导致运算顺序出错，出现意外的结果。
@@ -100,7 +100,7 @@ UB = Undefined Behavior，未定义行为
 
 程序将会从第二个元素开始输出非负数。如果没有负数，最后还会试图解引用尾后位置，是非法的，报错。
 ### 练习 4.19
-```
+```cpp
 int* ptr;
 vector<int> vec;
 int ival;
@@ -119,7 +119,7 @@ int ival;
 vec[ival] <= vec[ival + 1]
 ```
 ### 练习 4.20
-```
+```cpp
 (a) *iter++;    //合法。迭代器前移，再把原迭代器解引用
 
 (b) (*iter) ++;    //合法。解引用迭代器，再把其所指的值加1
@@ -150,7 +150,7 @@ vec[ival] <= vec[ival + 1]
 计算顺序：`[]`、`+`、`==`、`? :`、`=`
 
 执行`s + 'd' == 's'`发生错误，两边类型不匹配，应改为：
-```
+```cpp
 string p1 = s + (s[s.size() - 1] == 's' ? "" : "s");
 ```
 ### 练习 4.24
@@ -170,7 +170,7 @@ string p1 = s + (s[s.size() - 1] == 's' ? "" : "s");
 ### 练习 4.26
 unsigned int 最低16位，不足以表示30位同学的成绩情况，移位量过大的话会产生未定义的行为。
 ### 练习 4.27
-```
+```cpp
 ul1 = 00000000 00000000 00000000 00000011
 ul2 = 00000000 00000000 00000000 00000111
 (a) ul1 & ul2 = 00000000 00000000 00000000 00000011 = 3;
@@ -182,7 +182,7 @@ ul2 = 00000000 00000000 00000000 00000111
 [程序4.28: 输出内置类型大小](4.28.cpp)
 
 输出：(这个对齐真美，得好好学学\t，用不好）
-```
+```cpp
 void: nullptr_t 4 bytes
 
 bool:           1 bytes
@@ -221,7 +221,7 @@ uint64_t:       8 bytes
 
 ```
 ### 练习 4.30
-```
+```cpp
 (a) (sizeof x) + y
 (b) sizeof (p->mem[i])
 (c) (sizeof a) < b
@@ -231,7 +231,7 @@ uint64_t:       8 bytes
 前置版本用的对象本身，而后置版本用的对象变化前的副本，会造成资源的浪费。
 
 使用后置版本不需要做什么改动：
-```
+```cpp
 vector<int>::size_type cnt = ivec.size();
 for (vector<int>::size_type ix = 0; ix != ivec.size(); ix++, cnt--)
         ivec[ix] = cnt;
@@ -241,7 +241,7 @@ for (vector<int>::size_type ix = 0; ix != ivec.size(); ix++, cnt--)
 
 ptr和ix的作用是一样的，ptr用的是指针，ix用的是下标。
 ### 练习 4.33
-```
+```cpp
 someValue ? ++x, ++y : --x , --y
 = (someValue ? ++x, ++y : --x) , --y
 //当someValue = true时，计算++x和++y, 再计算--y，表达式最终结果是y
@@ -250,24 +250,24 @@ someValue ? ++x, ++y : --x , --y
 //个人认为，一个表达式的最终结果可以看作为其返回值
 ```
 ### 练习 4.34
-```
+```cpp
 (a) if(fval);    //float转化为bool
 (b) dval = fval + ival;    //ival转化为float, 结果再转换为double
 (c) dval + ival * cval;    //cval提升至int, 之后ival和cval转换成double
 ```
 ### 练习 4.35
-```
+```cpp
 (a) cval = 'a' + 3;    //发生了, 'a'提升至int, 'a'+3的结果转换成char
 (b) fval = ui - ival * 1.0;    //发生了, ival和ui转换成double，求值结果转换成float
 (c) dval = ui * fval;    //ui转换成float，结果再转换成double
 (d) cval = ival + fval + dval;    //ival和fval转换成double，结果再转换成char
 ```
 ### 练习 4.36
-```
+```cpp
 i *= static_cast<int> (d);
 ```
 ### 练习 4.37
-```
+```cpp
 pv = static_cast<void*>(const_cast<string*>(ps));
 i = static_cast<int>(*pc);
 pv = static_cast<void*>(&d);
