@@ -20,3 +20,42 @@ bool status;
 while(status = find(word)) { /*...*/ }
 if(!status) { /*...*/ }
 ```
+### 练习 5.5
+[程序5.5: 成绩转换](5.5.cpp)
+### 练习 5.6
+[程序5.6: 成绩转换](5.6.cpp)
+
+输入：
+```
+83 56 73 87 98 65 100 91
+```
+输出：
+```
+B F C B A+ D A++ A-
+```
+### 练习 5.7
+```cpp
+(a) 分号没写
+if (ival1 != ival2)
+    ival1 = ival2;
+else ival1 = ival2 = 0;
+
+(b) 语法没问题，逻辑不通
+if (ival < minval) {
+    minval = ival;
+    occurs = 1;
+}
+
+(c) if中变量没有初始化
+if (int ival = get_value())
+    cout << "ival = " << ival << endl;
+else if (!ival)
+    cout << "ival = 0\n";
+
+(d) if (ival == 0)
+        ival = get_value();
+```
+### 练习 5.8
+悬垂else：if分支多于else分支，else与if的匹配问题
+
+c++中，else与离它最近的尚未匹配的if进行匹配。
