@@ -214,3 +214,15 @@ switch(swt) {
         break;
 }
 ```
+### 练习 5.14
+[程序5.14: 统计连续重复次数](5.14.cpp)
+
+输入：
+```
+how now now now brown cow cow
+^Z
+```
+输出：
+```
+now counts 3
+```
