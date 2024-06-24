@@ -226,3 +226,83 @@ how now now now brown cow cow
 ```
 now counts 3
 ```
+### 练习 5.15
+(a) ix在for中定义，不能在if中使用
+```cpp
+int ix;
+for (ix = 0; ix != sz; ++ix) { /*...*/ }
+if(ix != sz)
+    //...
+```
+(b) 不满足for定义，即使是省略了也要有分号
+```cpp
+int ix;
+for(; ix != sz; ++ix) { /*...*/ }
+```
+(c) expression要修改初始化的变量，其余不能修改
+```cpp
+for (int ix = 0; ix != sz; ++ix) { /*...*/ }
+```
+### 练习 5.16
+更喜欢for，可以在内部定义迭代变量，结构工整，多数while都能用for来实现。
+```cpp
+// while
+int i = 0;
+while(i < 10) {
+    /*...*/
+    ++ i;
+}
+// for
+for(int i = 0; i < 10; ++ i) { /*...*/ }
+```
+### 练习 5.17
+[程序5.17: 判断两个vec前缀是否相同](5.17.cpp)
+### 练习 5.18
+(a) 输出两个数的和，do部分没有括号，离谱，没看出来
+```cpp
+do {
+    int v1, v2;
+    cout << "Please enter two numbers to sum:" ;
+    if (cin >> v1 >> v2)
+        cout << "Sum is: " << v1 + v2 << endl;
+while (cin);
+```
+(b) do-while条件部分有初始化
+```cpp
+int ival;
+do {
+    //...
+} while(ival = get_response());
+```
+(c) do-while条件部分变量必须在循环体外定义
+```cpp
+int ival;
+do {
+    ival = get_response();
+} while (ival);
+```
+### 练习 5.19
+[程序5.19: 选出较短的string](5.19.cpp)
+输入/输出：
+```
+jfldsa jfdklas
+较短的是：jfldsa
+jfkldas
+fjdkals
+较短的是：fjdkals
+jfd dkfsjl
+较短的是：jfd
+^Z
+无输入
+
+```
+### 练习 5.20
+[程序5.20: 判断有无连续相同单词](5.20.cpp)
+输入：无相同要有结束符哦
+```
+hf jf jfj jf jf
+```
+输出：
+```
+jf
+```
