@@ -326,3 +326,42 @@ SE
 ```
 no word
 ```
+### 练习 5.22
+```cpp
+do {
+    int sz = get_size();
+} while (sz <= 0);
+```
+### 练习 5.23
+[程序5.23: 输出两个整数相除](5.23.cpp)
+
+输入/输出：
+```
+78 32
+2
+65 3
+21
+^Z
+
+```
+### 练习 5.24
+[程序5.24: 修改、抛出异常](5.24.cpp)
+### 练习 5.25
+[程序5.25: 修改、处理异常](5.25.cpp)
+
+输入/输出：
+```
+3 2
+1
+2 0
+second number is zero
+try again and reset the number? Enter y or n
+y
+3
+0
+2 0
+second number is zero
+try again and reset the number? Enter y or n
+n
+
+```
