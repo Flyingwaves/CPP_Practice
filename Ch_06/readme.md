@@ -85,3 +85,9 @@ int abs(int n) {
 ```
 0 1 2 3 4 5 6 7 8 9
 ```
+### 练习 6.8
+[程序6.8: 头文件](Ch_06/Chapter6.h)
+### 练习 6.9
+[6.9_1: fact.cc](fact.cc)
+
+[6.9_2: factMain.cc](factMain.cc)
