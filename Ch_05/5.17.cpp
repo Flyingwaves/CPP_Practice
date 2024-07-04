@@ -19,9 +19,9 @@ int main()
     }
     
     if (flag)
-        cout << "前缀相同";
+        cout << "鍓嶇紑鐩稿悓";
     else
-        cout << "前缀不同";
+        cout << "鍓嶇紑涓嶅悓";
 
     return 0;
 
