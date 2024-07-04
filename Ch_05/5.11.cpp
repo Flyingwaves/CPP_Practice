@@ -44,8 +44,8 @@ int main()
     cout << "icnt:\t" << icnt << endl;
     cout << "ocnt:\t" << ocnt << endl;
     cout << "ucnt:\t" << ucnt << endl;
-    cout << "»»ĞĞ·û:\t" << entercnt << endl;
-    cout << "ÖÆ±í·û:\t" << tabcnt << endl;
-    cout << "¿Õ¸ñ:\t" << spacecnt << endl;
+    cout << "æ¢è¡Œç¬¦:\t" << entercnt << endl;
+    cout << "åˆ¶è¡¨ç¬¦:\t" << tabcnt << endl;
+    cout << "ç©ºæ ¼:\t" << spacecnt << endl;
     return 0;
 }
