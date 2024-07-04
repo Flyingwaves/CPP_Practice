@@ -13,7 +13,7 @@ int main()
 
     auto beg = ans.begin(), end = ans.end() - 1;
     auto mid = ans.begin() + (end - beg) / 2;
-    //Èôend = ans.end(), Ôòmid = ans.begin() + (end - beg + 1) / 2, ÅĞ¶Ïbeg < mid
+    //è‹¥end = ans.end(), åˆ™mid = ans.begin() + (end - beg + 1) / 2, åˆ¤æ–­beg < mid
 
     while (beg <= mid) {
         cout << *beg + *end << " ";
