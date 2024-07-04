@@ -218,3 +218,28 @@ void print(const int (&ia)[10])
         cout << ia[i] << endl;
 }
 ```
+### 练习 6.25
+[程序6.25: 连接main的实参并输出](6.25.cpp)
+
+输入：在vs中项目属性-调试-命令行处传参数
+```
+fds qw dfjla lgajop
+```
+输出：
+```
+argc = 5
+E:\CppProject\Project6\Debug\Project6.exe
+E:\CppProject\Project6\Debug\Project6.exe
+fds
+qw
+dfjla
+lgajop
+str = fdsqwdfjlalgajop
+```
+### 练习 6.26
+程序可以用上一题的：[程序6.25: 连接main的实参并输出](6.25.cpp)
+
+将输入改为：
+```
+-d -o ofile data0
+```
