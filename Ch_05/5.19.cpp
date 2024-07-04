@@ -10,10 +10,10 @@ int main()
         cin >> s1 >> s2;
         
         if (s1.empty()) {
-            cout << "ÎÞÊäÈë" << endl;
+            cout << "æ— è¾“å…¥" << endl;
         }
         else {
-            cout << "½Ï¶ÌµÄÊÇ£º";
+            cout << "è¾ƒçŸ­çš„æ˜¯ï¼š";
             if (s1.size() < s2.size())
                 cout << s1 << endl;
             else
