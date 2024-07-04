@@ -10,7 +10,7 @@ int main()
     while (cin >> grade) {
         if (grade <= 100) {
             auto it = scores.begin() + grade / 10;
-            (*it)++;    //这个()不可少阿
+            (*it)++;    //杩欎釜()涓嶅彲灏戦樋
         }
     }
     
