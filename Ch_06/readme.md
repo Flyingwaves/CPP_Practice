@@ -288,3 +288,32 @@ int factorial(int val)
 `val--`传递的是val减1之前的值，这样将会一直调用`factorial(val)`，造成递归循环。
 
 而且，对于`factorial(val--) * val`表达式，读取val和递减同时存在，造成未定义的问题。面对不同编译器，后面的val值可能不同。
+### 练习 6.36
+```cpp
+string (&func())[10];
+```
+### 练习 6.37
+```cpp
+//类型别名
+using strT = string[10];
+strT& func();
+
+//尾置类型
+auto func1() -> string(&)[10];
+
+//decltype
+string ss[5] = { "as", "new", "key", "book", "six" };
+decltype(ss) &func2();
+```
+函数不能返回数组，一定要返回指向其的指针或者引用
+```
+ error C2090: 函数返回数组
+```
+### 练习 6.38
+```cpp
+int odd[] = { 1,3,5,7,9 };
+int even[] = { 2,4,6,8,10 };
+decltype(odd)& arrPtr(int i) {
+    return (i % 2) ? odd : even;
+}
+```
