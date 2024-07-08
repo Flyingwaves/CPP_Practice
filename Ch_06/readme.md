@@ -317,3 +317,14 @@ decltype(odd)& arrPtr(int i) {
     return (i % 2) ? odd : even;
 }
 ```
+### 练习 6.39
+```
+int calc(int, int);
+int calc(const int, const int);    //重复定义，合法
+
+int get();
+double get();    //非法，和上一个函数形参相同、名字相同，但返回类型不同
+
+int *reset(int *);
+double *reset(double *);    //重载函数，新的参数类型与返回类型，合法。
+```
