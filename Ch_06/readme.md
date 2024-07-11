@@ -364,3 +364,35 @@ inline bool isShorter(const string& s1, const string& s2) {
 ### 练习 6.46
 不可以。`s1.size() < s2.size()`不是常量表达式
 ### 练习 6.47
+[程序6.47: 调试版改写6.33](6.47.cpp)
+
+输入：
+```
+2 3 4 56 6 78 8 9 329 32
+^Z
+```
+调试输出：
+```
+the vector size is 10
+2
+the vector size is 9
+3
+the vector size is 8
+4
+the vector size is 7
+56
+the vector size is 6
+6
+the vector size is 5
+78
+the vector size is 4
+8
+the vector size is 3
+9
+the vector size is 2
+329
+the vector size is 1
+32
+the vector size is 0
+
+```
