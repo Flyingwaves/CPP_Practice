@@ -357,7 +357,7 @@ inline bool isShorter(const string& s1, const string& s2) {
     return s1.size() < s2.size();
 }
 ```
-### 练习 6.45
+### 练习 6.45 (有些疑问)
 像6.17 6.21 6.22 6.23这样的函数不该是内联函数，因为它们流程不直接，调用次数少，难以直接展开；如6.42这种规模小，可以定义为内联函数。
 
 当然递归函数也不该是内联函数。
@@ -396,3 +396,4 @@ the vector size is 1
 the vector size is 0
 
 ```
+### 练习 6.48
