@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-//#define NDEBUG  //×¢ÊÍµô¾Í¿ªÆôµ÷ÊÔÄ£Ê½
+//#define NDEBUG  //æ³¨é‡Šæ‰å°±å¼€å¯è°ƒè¯•æ¨¡å¼
 using namespace std;
 
 void print_vec(vector<int>::const_iterator beg, vector<int>::const_iterator end) {
