@@ -8,7 +8,7 @@ void print_int(const int val) {
 void print_array(const int* beg, const int* end) {
     while (beg != end) {
         cout << *beg++ << " ";
-        //复习一下优先级
+        //澶嶄範涓�涓嬩紭鍏堢骇
     }
 }
 
