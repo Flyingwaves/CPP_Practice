@@ -12,4 +12,9 @@
 ### 目录
 #### 第Ⅰ部分 C++基础
 
-* 第二章 变量和基本类型(Ch_07/readme.md)
+* [第二章 变量和基本类型](Ch_02/readme.md)
+* [第三章 字符串、向量和数组](Ch_03/readme.md)
+* [第四章 表达式](Ch_04/readme.md)
+* [第五章 语句](Ch_05/readme.md)
+* [第六章 函数](Ch_06/readme.md)
+* [第七章 类](Ch_07/readme.md)
