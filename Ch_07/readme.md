@@ -122,3 +122,4 @@ class和struct仅在默认访问权限上不同。struct默认public，即若没
 ### 练习 7.21
 [程序7.21: Sales_data类，class封装](7.21.h)
 ### 练习 7.22
+[程序7.22: Person类，class封装](7.22.h)
