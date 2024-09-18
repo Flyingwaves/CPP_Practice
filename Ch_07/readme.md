@@ -141,3 +141,11 @@ class和struct仅在默认访问权限上不同。struct默认public，即若没
 xxxxxxxxxxxxxxxxxxxx#xxxx
 xxxxxxxxxxxxxxxxxxxx#xxxx
 ```
+### 练习 7.28
+若返回类型不是引用，那么所有做的操作都是对临时副本做的，并没有对myScreen进行修改。第二行输出的都是临时副本中的内容，当第二行语句执行完毕时，副本将会销毁。
+
+输出：
+```
+xxxxxxxxxxxxxxxxxxxx#xxxx
+xxxxxxxxxxxxxxxxxxxxxxxxx
+```
