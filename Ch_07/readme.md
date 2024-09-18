@@ -149,3 +149,7 @@ xxxxxxxxxxxxxxxxxxxx#xxxx
 xxxxxxxxxxxxxxxxxxxx#xxxx
 xxxxxxxxxxxxxxxxxxxxxxxxx
 ```
+### 练习 7.30
+优点：明确指出访问的是数据成员；在成员函数中可以使用与数据成员同名的形参，通过this进行区分。
+
+缺点：有时很多余，因为没有同名形参的时候，默认是数据成员，不用this指明。
