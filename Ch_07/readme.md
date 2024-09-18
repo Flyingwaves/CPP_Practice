@@ -131,3 +131,13 @@ class和struct仅在默认访问权限上不同。struct默认public，即若没
 可以。因为类中没有指针类型的成员，不存在需要深拷贝的问题，所以可以使用默认的拷贝和赋值操作。
 ### 练习 7.26
 [程序7.26: Sales_data类, 内联平均价格函数](7.26.h)
+### 练习 7.27
+[程序7.27: Screen类, 添加函数与重载](7.27.h)
+
+**注：** 私有功能函数相当于把this临时转换的过程抽离出来，利用调用和返回实现this类型的转变。若是直接靠着display，会造成非常量Screen形式上成为常量的假象，无法继续调用其他非const函数。
+
+输出：
+```
+xxxxxxxxxxxxxxxxxxxx#xxxx
+xxxxxxxxxxxxxxxxxxxx#xxxx
+```
