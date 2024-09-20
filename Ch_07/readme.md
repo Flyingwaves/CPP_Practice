@@ -168,3 +168,10 @@ class Y {
 [程序7.32: Window_mgr类，友元clear](7.32.h)
 
 注意类之间的声明定义的顺序，定义在友元声明后；类声明要在定义前，准确说是使用私有成员之前。这里screen声明在window类之前，这个例子中好像不声明也没啥问题。
+### 练习 7.33
+出错，找不到pos是何种类型。因为返回类型未指定作用域
+```cpp
+Screen::pos Screen::size() const {
+    return height * width;
+}
+```
