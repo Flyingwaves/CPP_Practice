@@ -175,3 +175,23 @@ Screen::pos Screen::size() const {
     return height * width;
 }
 ```
+### 练习 7.34
+dummy_fcn函数使用时在前面找不到pos的声明，会报错。注意从定义处之前找，在它眼里类型名的类内全局就在之前。
+### 练习 7.35
+```cpp
+typedef string Type;    //全局作用域Type为string别名
+Type initVal();        //全局作用域initVal返回类型string
+class Exercise {
+public:
+    typedef double Type;    //类内作用域Type为double别名
+    Type setVal(Type)；    //参数double，返回类型double
+    Type initVal();        //类内作用域initVal返回类型double
+private:
+    int val;
+};
+Type Exercise::setVal(Type parm) {        //返回类型为全局作用域下string，参数为类内作用域下double
+    val = parm + initVal();            //函数体内，用的都是类内作用域initVal
+    return val;
+}
+```
+setVal函数参数与返回类型与类内声明不一致，无法匹配造成错误。应改为`Exercise::Type Exercise::setVal(Type parm) {...}`
